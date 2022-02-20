@@ -1,0 +1,93 @@
+/* ---------
+  HEADER
+ --------- */
+
+// ---
+// CONTAINER
+// ---
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--dark-blue);
+  z-index: 100;
+
+  .container {
+    align-items: center;
+    gap: 0 2.778rem;
+    padding: 15px 0;
+  }
+}
+
+
+
+// ---
+// LOGO
+// ---
+.header-logo {
+  align-self: center;
+  font-size: 1.556rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #5B6071;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+
+
+// ---
+// NAVIGATION
+// ---
+.header-nav {
+  flex: 1;
+}
+
+
+// menu list
+.header-nav-menu {
+  display: flex;
+  gap: 0 2.778rem;
+}
+
+
+// menu list item
+.hnv-item {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #5B6071;
+
+  a {
+    color: inherit;
+  }
+
+  &.hnv-item-active,
+  a:hover {
+    color: #fff;
+  }
+
+}
+
+
+
+// ---
+// CONTACT BUTTON
+// ---
+.header-contact {
+  font-size: 1rem;
+  line-height: 1.2;
+  cursor: pointer;
+
+  a {
+    display: block;
+    padding: .611rem 0 .5rem;
+    color: inherit;
+    border-bottom: .15rem solid #fff;
+  }
+}
