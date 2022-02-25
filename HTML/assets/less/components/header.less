@@ -8,13 +8,38 @@
 header {
   position: sticky;
   top: 0;
-  background-color: var(--dark-blue);
+  padding-left: @gap-mob;
+  padding-right: @gap-mob;
+  background-color: @dark-blue;
   z-index: 100;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+    padding-left: @gap-p-tablet;
+    padding-right: @gap-p-tablet;
+  }
+  @media (min-width: @responsive_l_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    padding-left: @gap-l-tablet;
+    padding-right: @gap-l-tablet;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    padding-left: @gap-desktop;
+    padding-right: @gap-desktop;
+  }
 
   .container {
     align-items: center;
-    gap: 0 2.778rem;
-    padding: 15px 0;
+    .column_gap_med();
+    padding: 10px 0;
+
+    @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+      padding: 11px 0;
+    }
+    @media (min-width: @responsive_l_tablet_min) and (max-width: @responsive_l_tablet_max) {
+      padding: 13px 0;
+    }
+    @media (min-width: @responsive_desktop_min) {
+      padding: 15px 0;
+    }
   }
 }
 
@@ -52,7 +77,7 @@ header {
 // menu list
 .header-nav-menu {
   display: flex;
-  gap: 0 2.778rem;
+  .column_gap_med();
 }
 
 

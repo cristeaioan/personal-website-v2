@@ -3,6 +3,16 @@
  --------- */
 
 // ---
+// LINKS
+// ---
+a {
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+
+
+// ---
 // HEADINGS
 // ---
 h1, h2, h3, h4, h5, h6 {
@@ -20,24 +30,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.556rem;
+  font-size: 2.356rem;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    font-size: 2.456rem;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    font-size: 2.556rem;
+  }
 }
 
 h2 {
-  font-size: 2.222rem;
+  font-size: 2rem;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    font-size: 2.111rem;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    font-size: 2.222rem;
+  }
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    font-size: 1.9rem;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    font-size: 2rem;
+  }
 }
 
 h4 {
-  font-size: 1.667rem;
+  font-size: 1.467rem;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    font-size: 1.567rem;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    font-size: 1.667rem;
+  }
 }
 
 h5,
 h6 {
-  font-size: 1.444rem;
+  font-size: 1.244rem;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    font-size: 1.344rem;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    font-size: 1.444rem;
+  }
 }
 
 
@@ -49,10 +94,17 @@ p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--gray);
+  color: @gray;
 
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+
+    @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_l_tablet_max) {
+      margin-bottom: 2.111rem;
+    }
+    @media (min-width: @responsive_desktop_min) {
+      margin-bottom: 2.222rem;
+    }
   }
 
   a {

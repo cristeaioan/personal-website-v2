@@ -1,36 +1,96 @@
+/* ---------
+  MAIN
+ --------- */
+
+// ---
+// IMPORTS
+// ---
+// normalize
 @import "normalize";
 
+// variables
 @import "variables";
 
+// mixins
+@import "mixins";
+
+// grid
 @import "grid";
 
+// typography
 @import "type";
 
+// components
 @import "components/header";
+@import "components/footer";
 
+// pages
 @import "pages/about";
 
 
+
+// ---
+// GENERAL
+// ---
 * {
   box-sizing: border-box;
 }
 
+
+
+// ---
+// HTML TAG
+// ---
 html {
-  font-size: 18px;
+  font-size: 15px;
+
+  @media (min-width: @responsive_l_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    font-size: 16px;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    font-size: 18px;
+  }
 }
 
+
+
+// ---
+// BODY
+// ---
 body {
-  padding: 0 20px;
-  background-color: var(--dark-blue);
+  background-color: @dark-blue;
   font-family: 'Work Sans', sans-serif;
-  color: var(--white);
+  color: @white;
 }
 
-a {
-  text-decoration: none;
-  transition: color .2s ease-in-out;
+
+
+// ---
+// SECTIONS
+// ---
+section {
+  padding-left: @gap-mob;
+  padding-right: @gap-mob;
+
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+    padding-left: @gap-p-tablet;
+    padding-right: @gap-p-tablet;
+  }
+  @media (min-width: @responsive_l_tablet_min) and (max-width: @responsive_l_tablet_max) {
+    padding-left: @gap-l-tablet;
+    padding-right: @gap-l-tablet;
+  }
+  @media (min-width: @responsive_desktop_min) {
+    padding-left: @gap-desktop;
+    padding-right: @gap-desktop;
+  }
 }
 
+
+
+// ---
+// LISTS
+// ---
 ul {
   list-style-type: none;
   margin: 0;
