@@ -1,0 +1,52 @@
+/* ---------
+  FORMS
+ --------- */
+
+// ---
+// WRAP
+// ---
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 100%;
+}
+
+
+
+// ---
+// INPUTS
+// ---
+.form-input {
+  width: 100%;
+  background-color: @dark-blue;
+  padding: 1em 1.563em;
+  font-size: .889rem;
+  line-height: 1.4;
+  color: #B6B9C1;
+  border: 0;
+  border-radius: .556rem;
+  outline: none;
+
+  &:-webkit-autofill {
+    &,
+    &:hover,
+    &:focus {
+      -webkit-box-shadow: 0 0 0px 1000px @dark-blue inset;
+      -webkit-text-fill-color: #B6B9C1;
+    }
+  }
+
+  &::-webkit-input-placeholder,
+  &:-ms-input-placeholder,
+  &::placeholder {
+    color: #60697D;
+  }
+}
+
+
+// textarea
+textarea.form-input {
+  min-height: 14.625em;
+  max-height: 14.625em;
+}
